@@ -8,12 +8,11 @@
     {
       "name": "base",
       "generator": "Ninja",
-      "binaryDir": "${sourceDir}/Build",
       "cacheVariables": {
-        "CMAKE_C_COMPILER": "$env{MINGW_ROOT}/bin/gcc.exe",
-        "CMAKE_CXX_COMPILER": "$env{MINGW_ROOT}/bin/g++.exe",
-        "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
-        "CMAKE_PREFIX_PATH": "${sourceDir}/External/vcpkg_installed/x64-mingw-static",
+        "CMAKE_C_COMPILER": "$env{MINGW_ROOT}\\bin\\gcc.exe",
+        "CMAKE_CXX_COMPILER": "$env{MINGW_ROOT}\\bin\\g++.exe",
+        "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}\\scripts\\buildsystems\\vcpkg.cmake",
+        "CMAKE_PREFIX_PATH": "${sourceDir}\\External\\vcpkg_installed\\x64-mingw-static",
         "CMAKE_EXPORT_COMPILE_COMMANDS": "YES",
         "CMAKE_C_STANDARD": "23",
         "CMAKE_C_STANDARD_REQUIRED": "YES",
@@ -22,20 +21,34 @@
         "CMAKE_CXX_STANDARD_REQUIRED": "YES",
         "CMAKE_CXX_EXTENSIONS": "YES"
       }
+    },
+    {
+      "name": "debug",
+      "displayName": "Debug",
+      "inherits": "base",
+      "binaryDir": "${sourceDir}/Build/Debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "release",
+      "displayName": "Release",
+      "inherits": "base",
+      "binaryDir": "${sourceDir}/Build/Release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
     }
   ],
   "buildPresets": [
     {
       "name": "debug",
-      "displayName": "Debug",
-      "configurePreset": "base",
-      "configuration": "Debug"
+      "configurePreset": "debug"
     },
     {
       "name": "release",
-      "displayName": "Release",
-      "configurePreset": "base",
-      "configuration": "Release"
+      "configurePreset": "release"
     }
   ]
 }

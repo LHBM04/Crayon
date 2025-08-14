@@ -9,18 +9,16 @@ set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS ON)
 
-add_executable(CrayonEngine.exe System/Main.cpp)
+add_executable(CrayonEngine System/Main.cpp
+)
 
 find_package(SDL3 CONFIG REQUIRED)
 find_package(glad CONFIG REQUIRED)
 find_package(glm CONFIG REQUIRED)
 find_package(imgui CONFIG REQUIRED)
 
-if(MINGW)
-    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -mwindows")
-endif()
-
-target_link_libraries(CrayonEngine.exe
+target_link_libraries(CrayonEngine
+        SDL3::Headers
         SDL3::SDL3-static
         glad::glad
         glm::glm
