@@ -1,0 +1,25 @@
+{
+  "name": "nomad-runtime",
+  "version": "1.0.0",
+  "dependencies": [
+    "sdl3",
+    {
+      "name": "glad",
+      "features": [
+        "wgl",
+        "extensions",
+        "gl-api-latest",
+        "loader"
+      ]
+    },
+    "glm",
+    {
+      "name": "imgui",
+      "features": [
+        "docking-experimental",
+        "opengl3-binding",
+        "sdl3-binding"
+      ]
+    }
+  ]
+}
