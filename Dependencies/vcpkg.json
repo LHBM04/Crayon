@@ -1,5 +1,5 @@
 {
-  "name": "nomad-runtime",
+  "name": "crayon-runtime",
   "version": "1.0.0",
   "dependencies": [
     "sdl3",
@@ -17,9 +17,12 @@
       "name": "imgui",
       "features": [
         "docking-experimental",
-        "opengl3-binding",
-        "sdl3-binding"
+        "sdl3-binding",
+        "opengl3-binding"
       ]
-    }
+    },
+    "spdlog",
+    "stb",
+    "openal-soft"
   ]
 }
