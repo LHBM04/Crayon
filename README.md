@@ -1,5 +1,9 @@
 # Crayon
 
+[![C++](https://img.shields.io/badge/Language-C%23-blue)](https://docs.microsoft.com/dotnet/csharp/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green)](https://opensource.org/licenses/MIT)
+[![GitHub Repo Stars](https://img.shields.io/github/stars/LHBM04/Crayon?style=social)](https://github.com/LHBM04/Crayon/stargazers)
+[![GitHub Release](https://img.shields.io/github/v/release/LHBM04/Crayon)](https://github.com/LHBM04/Crayon/releases)
 Crayon - Simple framework for 2D game development with SDL3.
 
 ## Goal
